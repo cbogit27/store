@@ -31,7 +31,7 @@ export default async function ProductDetailPage({ params }: DeepProductProps) {
   if (!category || !item) return notFound();
 
   return (
-    <main className="w-full min-h-screen">
+    <main className="w-full min-h-screen py-12">
       
       {/* High-Fidelity Continuous Playback Video Hero Background */}
       <header className="relative bg-gray-950 text-white">
