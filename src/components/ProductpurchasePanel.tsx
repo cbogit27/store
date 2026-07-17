@@ -80,7 +80,7 @@ export default function ProductPurchasePanel({product,}: ProductPurchasePanelPro
                 cursor-pointer
                 items-center
                 justify-center
-                border
+                border-1
                 border-gray-300
                 text-md
                 font-medium
@@ -129,8 +129,8 @@ export default function ProductPurchasePanel({product,}: ProductPurchasePanelPro
                 h-8
                 w-8
                 rounded-full
-                border-2
-                border-gray-300
+                border-1
+                border-gray-200/50
                 data-[checked]:border-black
               "
                 style={{
@@ -150,7 +150,7 @@ export default function ProductPurchasePanel({product,}: ProductPurchasePanelPro
 
       <div className="flex flex-col gap-4 lg:flex-row">
 
-        <div className="flex h-16 w-32 items-center justify-between rounded-full border border-gray-300 px-6">
+        <div className="flex h-16 w-32 items-center justify-between rounded-full border-1 border-gray-300/50 px-6">
 
           <button
             onClick={() => setQuantity((q) => Math.max(1, q - 1))}
