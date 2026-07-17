@@ -31,15 +31,9 @@ export default function ProductPurchasePanel({product,}: ProductPurchasePanelPro
       {/* Title */}
       
           <div className="mb-10 max-w-3xl">
-      
-            <h1 className="text-4xl lg:text-5xl font-black">
+            <h1 className="text-xl lg:text-3xl font-semibold">
               {product.name}
-            </h1>
-      
-            <p className="mt-5 text-lg text-gray-300">
-              {product.description}
-            </p>
-      
+            </h1>      
           </div>
 
       {/* Price */}
@@ -132,8 +126,8 @@ export default function ProductPurchasePanel({product,}: ProductPurchasePanelPro
 
               <div
                 className="
-                h-10
-                w-10
+                h-8
+                w-8
                 rounded-full
                 border-2
                 border-gray-300
