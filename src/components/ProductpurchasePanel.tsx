@@ -275,24 +275,6 @@ export default function ProductPurchasePanel({product,}: ProductPurchasePanelPro
 
       <hr />
 
-      {/* Meta */}
-
-      <div className="grid gap-4 text-sm text-gray-600 sm:grid-cols-3">
-
-        <div>
-          <span className="font-semibold">Vendor:</span> Taeillo
-        </div>
-
-        <div>
-          <span className="font-semibold">Type:</span> Bed &amp; Beddings
-        </div>
-
-        <div>
-          <span className="font-semibold">SKU:</span> N/A
-        </div>
-
-      </div>
-
     </div>
   );
 }
