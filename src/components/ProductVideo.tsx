@@ -1,23 +1,39 @@
-// components/ProductVideo.tsx
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface ProductVideoProps {
   src: string;
   poster?: string;
   className?: string;
+  autoPlay?: boolean;
 }
 
-export default function ProductVideo({ src, poster, className }: ProductVideoProps) {
+export default function ProductVideo({
+  src,
+  poster,
+  className,
+  autoPlay = false,
+}: ProductVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  useEffect(() => {
+    if (autoPlay) {
+      videoRef.current?.play().catch(() => {});
+    }
+  }, [autoPlay]);
+
   const handleMouseEnter = () => {
-    videoRef.current?.play().catch((err) => console.log("Video play interrupted:", err));
+    if (!autoPlay) {
+      videoRef.current?.play().catch(() => {});
+    }
   };
 
   const handleMouseLeave = () => {
-    videoRef.current?.pause();
+    if (!autoPlay) {
+      videoRef.current?.pause();
+      videoRef.current!.currentTime = 0;
+    }
   };
 
   return (
@@ -28,7 +44,8 @@ export default function ProductVideo({ src, poster, className }: ProductVideoPro
       muted
       loop
       playsInline
-      preload="none"
+      preload="metadata"
+      autoPlay={autoPlay}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={className}

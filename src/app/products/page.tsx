@@ -49,7 +49,7 @@ export default function ProductsSummaryPage() {
                   <Link
                     key={item.slug}
                     href={`/products/${category.slug}/${item.slug}`}
-                    className="flex items-center gap-4 p-4 rounded-xl border border-gray-50 hover:border-blue-100 hover:bg-gray-50/30 transition-all group"
+                    className="flex items-center gap-4 p-4 rounded-xl border border-gray-50 hover:border-blue-100/50 hover:bg-gray-500/30 transition-all group"
                   >
                     <div className="h-16 w-16 bg-gray-900 rounded-lg overflow-hidden flex-shrink-0 relative">
                       <ProductVideo 
@@ -57,7 +57,7 @@ export default function ProductsSummaryPage() {
                       className="w-full h-48 object-cover rounded-lg"/>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-base font-bold text-gray-900 truncate group-hover:text-blue-600 transition-colors">
+                      <h4 className="text-base font-normal text-gray-300 truncate group-hover:text-white transition-colors">
                         {item.name}
                       </h4>
                       <p className="text-xs text-gray-500 truncate mt-0.5">{item.description}</p>

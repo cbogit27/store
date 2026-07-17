@@ -22,10 +22,25 @@ export default function ProductPurchasePanel({product,}: ProductPurchasePanelPro
   const [quantity, setQuantity] = useState(1);
   const [agree, setAgree] = useState(false);
   const { addToCart, toggleWishlist } = useStore();
+
+  
   
 
   return (
-    <div className="w-full max-w-xl space-y-4">
+    <div className="w-full rounded-3xl bg-black/30 backdrop-blur-md p-6 sm:p-8 space-y-6 border border-white/10">
+      {/* Title */}
+      
+          <div className="mb-10 max-w-3xl">
+      
+            <h1 className="text-4xl lg:text-5xl font-black">
+              {product.name}
+            </h1>
+      
+            <p className="mt-5 text-lg text-gray-300">
+              {product.description}
+            </p>
+      
+          </div>
 
       {/* Price */}
       <div>

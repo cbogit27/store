@@ -57,9 +57,9 @@ export default async function CategoryLanderPage({ params }: CategoryProps) {
               className="group relative flex flex-col rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="aspect-video w-full bg-gray-100 overflow-hidden relative">
-                <ProductVideo 
-                src={item.videoUrl} // or item.videoUrl depending on your loop
-                className="w-full h-full object-cover"
+                <ProductVideo
+                    src={item.videoUrl}
+                    className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-3 left-3 bg-black/50 backdrop-blur-md px-2.5 py-1 text-[11px] text-white font-medium rounded-md tracking-wide">
                   Hover to preview video
