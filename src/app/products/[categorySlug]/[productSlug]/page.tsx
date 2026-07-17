@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { productCategories } from '@/data/productData';
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
+import CheckIcon from '@mui/icons-material/Check';
 import ProductVideo from '@/components/ProductVideo';
 import ProductPurchasePanel from '@/components/ProductPurchasePanel';
 
@@ -88,11 +89,11 @@ export default async function ProductDetailPage({ params }: DeepProductProps) {
       {/* Accessible Interactive Content Section Using Headless UI Tabs */}
       <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
         <TabGroup>
-          <TabList className="flex gap-4 border-b border-gray-200 pb-px">
-            <Tab className="rounded-t-lg px-4 py-2.5 text-sm font-semibold text-gray-600 outline-none data-[selected]:border-b-2 data-[selected]:border-blue-600 transition-all">
+          <TabList className="flex gap-4 border-b border-gray-200/20 pb-px">
+            <Tab className="rounded-t-lg px-4 py-2.5 text-sm font-normal text-gray-600 outline-none data-[selected]:border-b-2 data-[selected]:border-blue-200 transition-all">
               Overview
             </Tab>
-            <Tab className="rounded-t-lg px-4 py-2.5 text-sm font-semibold text-gray-600 outline-none data-[selected]:border-b-2 data-[selected]:border-blue-600 transition-all">
+            <Tab className="rounded-t-lg px-4 py-2.5 text-sm font-normal text-gray-600 outline-none data-[selected]:border-b-2 data-[selected]:border-blue-200 transition-all">
               Key Metrics
             </Tab>
           </TabList>
@@ -105,11 +106,11 @@ export default async function ProductDetailPage({ params }: DeepProductProps) {
             </TabPanel>
             
             <TabPanel className="outline-none focus:ring-0">
-              <h3 className="text-lg font-bold mb-3">Technical Specifications Matrix</h3>
+              <h3 className="text-lg font-normal mb-3">Technical Specifications Matrix</h3>
               <ul className="space-y-2">
                 {item.features.map((feat, index) => (
-                  <li key={index} className="flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-100">
-                    <span className="text-blue-500 font-bold">✓</span> {feat}
+                  <li key={index} className="flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-100/20">
+                    <span className="text-blue-500/50 font-bold"><CheckIcon fontSize='small'/></span> {feat}
                   </li>
                 ))}
               </ul>

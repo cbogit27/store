@@ -5,7 +5,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/react";
 export default function ProductFilter() {
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <MenuButton className="inline-flex items-center gap-2 rounded-lg px-4 py-2 shadow ring-1 ring-gray-300">
+      <MenuButton className="inline-flex items-center gap-2 rounded-lg px-4 py-2 shadow ring-1 ring-gray-300/20">
         Filter Options
       </MenuButton>
 

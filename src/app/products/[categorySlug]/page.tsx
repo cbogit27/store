@@ -36,9 +36,9 @@ export default async function CategoryLanderPage({ params }: CategoryProps) {
         </nav>
 
         {/* Interface Header with Headless UI Accessible Menu Control */}
-        <div className="mt-4 flex flex-col gap-4 border-b border-gray-200 pb-6 mb-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-4 flex flex-col gap-4 border-b border-gray-200/20 pb-6 mb-8 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="text-3xl font-black tracking-tight text-gray-900">{category.name} Catalog</h1>
+            <h1 className="text-3xl font-normal tracking-tight text-gray-200">{category.name} Catalog</h1>
             <p className="mt-1 text-sm text-gray-600">Premium design standards tailored directly to your flow.</p>
           </div>
 
@@ -54,7 +54,7 @@ export default async function CategoryLanderPage({ params }: CategoryProps) {
             <Link
               key={item.slug}
               href={`/products/${category.slug}/${item.slug}`}
-              className="group relative flex flex-col rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group relative flex flex-col rounded-2xl border border-gray-200/20 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="aspect-video w-full bg-gray-100 overflow-hidden relative">
                 <ProductVideo
@@ -67,10 +67,10 @@ export default async function CategoryLanderPage({ params }: CategoryProps) {
               </div>
               <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">{item.name}</h3>
+                  <h3 className="text-lg font-normal text-gray-50 group-hover:text-gray-300 transition-colors">{item.name}</h3>
                   <p className="text-sm text-gray-500 mt-2 line-clamp-2">{item.description}</p>
                 </div>
-                <div className="flex items-center justify-between border-t border-gray-100 pt-4 mt-5">
+                <div className="flex items-center justify-between border-t border-gray-100/20 pt-4 mt-5">
                   <span className="text-lg font-black text-gray-900">{item.price}</span>
                   <span className="text-xs font-semibold text-blue-600 group-hover:underline">View Specs &rarr;</span>
                 </div>

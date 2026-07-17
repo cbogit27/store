@@ -31,7 +31,7 @@ export default function ProductPurchasePanel({product,}: ProductPurchasePanelPro
       {/* Title */}
       
           <div className="mb-10 max-w-3xl">
-            <h1 className="text-xl lg:text-3xl font-semibold">
+            <h1 className="text-xl lg:text-3xl font-normal">
               {product.name}
             </h1>      
           </div>
@@ -44,19 +44,19 @@ export default function ProductPurchasePanel({product,}: ProductPurchasePanelPro
 
         <p className="mt-5 leading-7">
           {product.description}
-          <span className="ml-2 font-medium">
+          <span className="ml-2 text-sm font-normal">
             DIMENSIONS (4 × 6, 4.5 × 6, 5 × 6, 6 × 6)
           </span>
         </p>
       </div>
 
-      <hr />
+      <hr className="text-white/20"/>
 
       {/* Size Selector */}
 
       <Field>
 
-        <Label className="mb-4 block text-base font-medium">
+        <Label className="mb-4 block text-base font-normal">
           Size :
           <span className="ml-2">
             {selectedSize}
@@ -81,7 +81,7 @@ export default function ProductPurchasePanel({product,}: ProductPurchasePanelPro
                 items-center
                 justify-center
                 border-1
-                border-gray-300
+                border-gray-300/20
                 text-md
                 font-medium
                 transition
@@ -103,7 +103,7 @@ export default function ProductPurchasePanel({product,}: ProductPurchasePanelPro
 
       <Field>
 
-        <Label className="mb-4 block font-medium">
+        <Label className="mb-4 block font-normal">
           Color :
           <span className="ml-2">
             {selectedColor}
@@ -282,7 +282,7 @@ export default function ProductPurchasePanel({product,}: ProductPurchasePanelPro
 
       </div>
 
-      <hr />
+      <hr className="text-white/20"/>
 
     </div>
   );
