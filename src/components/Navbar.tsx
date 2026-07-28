@@ -75,7 +75,7 @@ export default function Nav(){
             )}
             </MenuButton>
     
-          <MenuItems transition className="absolute right-0 z-50 mt-2 w-64 origin-top-right rounded-xl bg-gray-900 p-2 shadow-xl ring-1 ring-white/5 focus:outline-none">
+          <MenuItems transition className="absolute right-20 z-50 mt-2 w-64 origin-top-right rounded-xl bg-gray-900 p-2 shadow-xl ring-1 ring-white/5 focus:outline-none">
             <motion.div
             initial="initial"
             animate="animate"
