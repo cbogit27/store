@@ -202,7 +202,7 @@ export default function Nav(){
             </div>
 
         {/* viewport dropdown menu */}
-        <div className={`fixed inset-0 w-full min-h-screen min-h-dvh bg-gray-600 text-gray-100 flex flex-col items-start justify-start transition-transform duration-500 ease-in-out z-60 ${
+        <div className={`fixed inset-0 w-full min-h-screen min-h-dvh bg-gray-600 text-gray-100 flex flex-col items-start justify-start transition-transform duration-500 ease-in-out z-20 ${
             isOpen ? 'translate-y-0' : '-translate-y-full'
         }`}>
             <div className="p-12 space-y-4 ">
