@@ -1,8 +1,29 @@
 @import "tailwindcss";
 
-*{
-    scroll-behavior: smooth;
+/* FIX 1: Global scrolling behavior */
+html {
+  scroll-behavior: smooth;
 }
+
+/* FIX 2: Make the document occupy the full viewport */
+html,
 body {
-    @apply bg-gray-900 container text-gray-200;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* FIX 3: Prevent horizontal overflow */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  @apply bg-gray-900 text-gray-200;
+
+  overflow-x: hidden;
 }
