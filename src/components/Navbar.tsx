@@ -41,13 +41,6 @@ export default function Nav(){
     const wishlist = useStore((state) => state.wishlist);
     const notifications = useStore((state) => state.notifications);
 
-    // const menuAnimation = {
-    //     initial: { opacity: 0, scale: 0.95, y: -10 },
-    //     animate: { opacity: 1, scale: 1, y: 0 },
-    //     exit: { opacity: 0, scale: 0.95, y: -10 },
-    //     transition: { duration: 0.15, ease: 'easeOut' }
-    // };
-
     const dropdownVariants = {
     initial: { opacity: 0, scale: 0.95, y: -10 },
     animate: { opacity: 1, scale: 1, y: 0 },
@@ -73,7 +66,7 @@ export default function Nav(){
                     <div className="p-1"><SearchSharpIcon fontSize="small"/></div>
                     <div className="p-1"><PersonSharpIcon fontSize="small"/></div>
                     <Menu as="div" className="relative">
-            <MenuButton className="relative p-2 text-white hover:text-blue-600 transition-colors">
+            <MenuButton type="button" className="relative p-2 text-white hover:text-blue-600 transition-colors">
             <span>
                 <NotificationsNoneSharpIcon fontSize="small"/>
                 </span>
@@ -94,7 +87,7 @@ export default function Nav(){
             <div className="flex items-center justify-between px-3 py-2 border-b border-gray-100 text-sm">
               <span className="font-bold text-gray-900">Activity Log</span>
               {notifications.length > 0 && (
-                <button onClick={clearNotifications} className="text-[10px] text-blue-600 hover:underline">Clear</button>
+                <button type="button" onClick={clearNotifications} className="text-[10px] text-blue-600 hover:underline">Clear</button>
               )}
             </div>
             {notifications.length === 0 ? (
@@ -113,7 +106,7 @@ export default function Nav(){
     
       </Menu>
         <Menu as="div" className="relative">
-            <MenuButton className="relative p-2 text-gray-700 hover:text-blue-600 transition-colors">
+            <MenuButton type="button" className="relative p-2 text-gray-700 hover:text-blue-600 transition-colors">
                 <span>
                     <FavoriteBorderSharpIcon fontSize="small"/>
                 </span>
@@ -148,7 +141,7 @@ export default function Nav(){
         
       </Menu>
       <Menu as="div" className="relative">
-        <MenuButton className="relative p-2 text-gray-700 hover:text-blue-600 transition-colors">
+        <MenuButton type="button" className="relative p-2 text-gray-700 hover:text-blue-600 transition-colors">
           <span>
             <LocalMallSharpIcon fontSize="small"/>
             </span>
@@ -179,7 +172,7 @@ export default function Nav(){
                       <p className="font-semibold text-white truncate">{item.name}</p>
                       <p className="text-white">{item.price} x {item.quantity}</p>
                     </div>
-                    <button onClick={() => removeFromCart(item.slug)} className="text-white p-2 font-bold hover:text-gray-200">✕</button>
+                    <button type="button" onClick={() => removeFromCart(item.slug)} className="text-white p-2 font-bold hover:text-gray-200">✕</button>
                   </div>
                 ))}
                 <MenuItem>
@@ -194,7 +187,8 @@ export default function Nav(){
        
       </Menu>
                 </div>
-            <button 
+            <button
+                type="button" 
                 onClick={toggleMenu}
                 className="w-10 h-10 z-50 flex flex-col justify-center items-center relative focus:outline-none"
                 aria-label="Toggle Menu">
@@ -211,18 +205,19 @@ export default function Nav(){
         <div className={`fixed inset-0 bg-gray-600 text-gray-100 flex flex-col items-start justify-start transition-transform duration-500 ease-in-out z-0 container mx-auto ${
             isOpen ? 'translate-y-0' : '-translate-y-full'
         }`}>
-            <div className="p-12 space-y-4">
+            <div className="p-12 space-y-4 ">
                 <div className="text-2xl">logo</div>
             
-                <div>
-                    <input className="border-2 border-white p-2 focus:outline-none text-white text-lg" placeholder="Search"/>
+                <div className='relative z-20'>
+                    <input className="border-1 border-white/20 p-2 focus:outline-none text-white text-lg" placeholder="Search"/>
                 </div>
             
                 <div>
                     <Links 
                     links={allMobileLinks} 
-                    className="flex flex-col gap-2.5 text-2xl font-normal"
-                    itemClassName="py-8 hover:bg-gray-50 rounded-md"/>
+                    onLinkClick={() => setIsOpen(false)}
+                    className="flex flex-col gap-1.5 text-2xl font-normal w-full border-b-1 border-white/20"
+                    itemClassName="py-2 px-2.5 hover:bg-gray-50 rounded w-full block"/>
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@ export default function Links({links, className="flex items-center gap-6", itemC
             {links.map((link) => {
                 const isActive = pathname === link.href;
                 return (
-                <li key={link.href}>
+                <li key={link.href} className="">
                     <Link 
                     href={link.href}
                     onClick={onLinkClick}
