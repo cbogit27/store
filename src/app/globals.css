@@ -6,13 +6,13 @@ html {
 }
 
 /* FIX 2: Make the document occupy the full viewport */
-html,
+/* html,
 body {
   width: 100%;
   min-height: 100%;
   margin: 0;
   padding: 0;
-}
+} */
 
 /* FIX 3: Prevent horizontal overflow */
 html {
